@@ -1,6 +1,15 @@
 # Visualize the Connectivity Between Naval Vessel Routes and PACE
 
+<center> <img src="https://github.com/gabboraron/PACEMapWithVesselRoute/blob/main/prezi/juxtapose-gif.gif"></img></center>
+
 This project visualizes the connectivity between naval vessel routes and PACE (Plankton, Aerosol, Cloud, ocean Ecosystem) data. The visualization helps in understanding the impact of naval routes on marine ecosystems.
+
+**More about the project:**
+- [Project page on NASA Space Apps Challenge 2024](https://www.spaceappschallenge.org/nasa-space-apps-2024/find-a-team/spacewatch/?tab=project)
+- [Short video](https://obudaiegyetem-my.sharepoint.com/:v:/g/personal/buriansandor95_stud_uni-obuda_hu/EWVj81AjwghGjxzowp7CQOcB1-EH6FDnXmXI6qgE3UaD7Q?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=tmSdsJ)
+- [PowerPoint presentation](https://obudaiegyetem-my.sharepoint.com/:p:/g/personal/buriansandor95_stud_uni-obuda_hu/Eb_yZgXilRRGqSAwW6lf-x4BjkHg9Xvw7mW3CYnFbbSAMg?e=4AxpXy)
+
+---------------------------------
 
 ## Table of Contents
 - [Introduction](#introduction)
