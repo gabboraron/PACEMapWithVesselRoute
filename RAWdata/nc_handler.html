@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NetCDF Visualization</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/netcdfjs"></script>
+    <script src="https://unpkg.com/leaflet.heat/dist/leaflet-heat.js"></script>
+    <style>
+        #map {
+            height: 600px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <input type="file" id="fileInput" accept=".nc" />
+    <script>
+        document.getElementById('fileInput').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const arrayBuffer = e.target.result;
+                const netcdf = new netcdfjs(arrayBuffer);
+
+                // Extract variables
+                const lat = netcdf.getDataVariable('lat');
+                const lon = netcdf.getDataVariable('lon');
+                const poc = netcdf.getDataVariable('poc');
+
+                // Create a Leaflet map
+                const map = L.map('map').setView([0, 0], 2);
+
+                // Add OpenStreetMap tile layer
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '&copy; OpenStreetMap contributors'
+                }).addTo(map);
+
+                // Prepare heatmap data
+                const heatData = [];
+                for (let i = 0; i < lat.length; i++) {
+                    for (let j = 0; j < lon.length; j++) {
+                        heatData.push([lat[i], lon[j], poc[i * lon.length + j]]);
+                    }
+                }
+
+                // Add heatmap layer
+                L.heatLayer(heatData, { radius: 10 }).addTo(map);
+            };
+            reader.readAsArrayBuffer(file);
+        });
+    </script>
+</body>
+</html>
