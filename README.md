@@ -60,7 +60,7 @@ To run this project locally, follow these steps:
 - **Vessel Routes**: Global Shipping Lanes data from CIA.
 - **Underwater Data Cables** 
 
-More detailed description in [RAWdaata/README.md]](RAWdaata/README.md)
+More detailed description in [RAWdaata/README.md](RAWdaata/README.md)
 
 ## Contributing
 Contributions are welcome! Please follow these steps to contribute:
