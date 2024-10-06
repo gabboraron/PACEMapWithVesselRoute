@@ -1,4 +1,4 @@
-# Here you can find how I turned the RAW data to intereteing images
+# Here you can find how I turned the RAW data to interesting images
 
 I started [with PACE NetCDF images](https://pace.oceansciences.or) with an [8 day period](NetCDF/README.md) and based on [Abhishek Mamdapure's Medium post, "How to read and visualize netCDF(.nc) geospatial files using python?"](https://medium.com/analytics-vidhya/how-to-read-and-visualize-netcdf-nc-geospatial-files-using-python-6c2ac8907c7c) and with the help of GitHub Copilot I turned them into images.
 
